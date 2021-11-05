@@ -3,6 +3,8 @@
 
 2. Search for EC2
 
+![search-ec2](./images/search-ec2.png)
+
 3. Click Launch Instance (Launches an EC2 VM)
 
 4. Choose Ubuntu20
