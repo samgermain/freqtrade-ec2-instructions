@@ -59,3 +59,6 @@ git clone https://github.com/freqtrade/freqtrade
 cd ./freqtrade
 ./setup.sh -i
 ```
+
+**Note**
+You may have trouble installing ta-lib on a t2-micro, you can try a more powerful virtual machine (t2.small?) or try using `clang` as a C compiler instead of `gcc` (If you figure out how to use clang, a PR with instructions would be appreciated)
