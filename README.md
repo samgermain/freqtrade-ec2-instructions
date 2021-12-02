@@ -15,9 +15,9 @@
 
 5. Select t2.micro (It’s the one that works with a free trial). Click Review and Launch
 
-**Note**
+##### Note
 
-You may have trouble installing ta-lib on a t2-micro, you can try a more powerful virtual machine (t2.small?) or try using `clang` as a C compiler instead of `gcc` (If you figure out how to use clang, a PR with instructions would be appreciated)
+- You may have trouble installing ta-lib on a t2-micro, you can try a more powerful virtual machine (t2.small?) or try using `clang` as a C compiler instead of `gcc` (If you figure out how to use clang, a PR with instructions would be appreciated)
 
 
 ![](./images/t2-micro.jpg)
