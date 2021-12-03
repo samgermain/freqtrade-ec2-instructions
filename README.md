@@ -88,4 +88,6 @@ screen -dm freqtrade -s YourStrategy
 
 Freqtrade is now running in the background and you can `exit` out of your connection, close your terminal, turn off your computer, and freqtrade will still be running. 
 
-If you want to check the console output of your execution of freqtrade, you can reconnect to your VM and run `screen -r` to open your execution in the foreground. Once you are done checking it, press ctrl+d followed by ctrl+a
+If you want to check the console output of your execution of freqtrade, you can reconnect to your VM and run `screen -r` to open your execution in the foreground. 
+
+Once you are done checking it, press ctrl+d followed by ctrl+a to move the process back to the background
