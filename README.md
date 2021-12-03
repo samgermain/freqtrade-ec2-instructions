@@ -17,8 +17,7 @@
 
 ##### Note
 
-- You may have trouble installing ta-lib on a t2-micro, you can try a more powerful virtual machine (t2.small?) or try using `clang` as a C compiler instead of `gcc` (If you figure out how to use clang, a PR with instructions would be appreciated)
-
+- You may have trouble installing ta-lib from the `setup.sh` script on a t2-micro, sometimes it works, sometimes it doesn't. You can try to non free-trail t2.small for better results.
 
 ![](./images/t2-micro.jpg)
 
@@ -64,3 +63,9 @@ git clone https://github.com/freqtrade/freqtrade
 cd ./freqtrade
 ./setup.sh -i
 ```
+
+13. If your installation hangs on `Running setup.py install for TA-Lib ../` you can try
+- Using a t2.small(not free-trial eligible) instead of a t2 micro
+- using `clang` as a C compiler instead of `gcc` (If you figure out how to use clang, a PR with instructions would be appreciated)
+- Deactivating your ec2 and installing a new one
+- Exiting your session and trying to install a different day (sometimes it just doesn't work)
