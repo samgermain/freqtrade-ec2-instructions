@@ -67,5 +67,5 @@ cd ./freqtrade
 13. If your installation hangs on `Running setup.py install for TA-Lib ../` you can try
 - Using a t2.small(not free-trial eligible) instead of a t2 micro
 - using `clang` as a C compiler instead of `gcc` (If you figure out how to use clang, a PR with instructions would be appreciated)
-- Deactivating your ec2 and installing a new one
+- Deactivating your ec2 and setting up a new one
 - Exiting your session and trying to install a different day (sometimes it just doesn't work)
