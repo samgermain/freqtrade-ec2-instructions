@@ -61,7 +61,20 @@ ssh -i ~/.ssh/freqbot.pem ubuntu@your_ip.compute.amazonaws.com
 
 ![](./images/ssh.jpg)
 
-### 12. Your ec2 is all good now. You can run this to get freqtrade downloaded and configured
+### 12.a (Optionl, kinda) You'll probably run into less problems if you use clang as your compiler and install TA-LIB with it instead of using gcc
+
+```
+sudo apt-get update
+sudo apt-get install python3.9 screen clang python3-dev python3.9-dev <<< 'y'
+sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo CC=clang python3.9 get-pip.py 
+wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+tar zxvf ta-lib-0.4.0-src.tar.gz
+cd ta-lib && sed -i.bak "s|0.00000001|0.000000000000000001 |g" src/ta_func/ta_utility.h && ./configure && make && sudo make install && cd ..
+sudo CC=clang LDSHARED="clang -shared" python3.9 -m pip install TA-LIB
+```
+
+### 12.b Your ec2 is all good now. You can run this to get freqtrade downloaded and configured
 ```
 sudo apt-get update
 sudo apt-get install python3.9
@@ -73,7 +86,7 @@ cd ./freqtrade
 ##### NOTE 
 If your installation hangs on `Running setup.py install for TA-Lib ../` you can try
 - Using a t2.small(not free-trial eligible) instead of a t2 micro
-- using `clang` as a C compiler instead of `gcc` (If you figure out how to use clang, a PR with instructions would be appreciated)
+- using `clang` as a C compiler instead of `gcc`
 - Deactivating your ec2 and setting up a new one
 - Exiting your session and trying to install a different day (sometimes it just doesn't work)
 
